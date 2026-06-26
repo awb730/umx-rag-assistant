@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-950 text-gray-100;
+  }
+}
+
+@keyframes gridPulse {
+  0% {
+    background-image:
+      linear-gradient(rgba(76, 215, 246, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(76, 215, 246, 0.08) 1px, transparent 1px);
+  }
+  33% {
+    background-image:
+      linear-gradient(rgba(99, 102, 241, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99, 102, 241, 0.1) 1px, transparent 1px);
+  }
+  66% {
+    background-image:
+      linear-gradient(rgba(168, 85, 247, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(168, 85, 247, 0.1) 1px, transparent 1px);
+  }
+  100% {
+    background-image:
+      linear-gradient(rgba(76, 215, 246, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(76, 215, 246, 0.08) 1px, transparent 1px);
+  }
+}
+
+.grid-bg {
+  background-size: 48px 48px;
+  animation: gridPulse 4s ease-in-out infinite;
+}
